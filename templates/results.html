@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Process{% endblock title %}
+
+{% block body %}
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-title mt-5">
+            <span>Results</span>
+            <h2>Results</h2>
+        </div>
+        <div class="row col-lg-10 m-auto justify-content-center">
+            <div class="col-lg-6">
+                <h3>Input Image</h3>
+                <img class="img-fluid" src="{{ img.image.url }}" alt="Input Image">
+            </div>
+            <div class="col-lg-6">
+                <h3>Denoised Image</h3>
+                <img class="img-fluid" src="{{ img.denoised_image }}" alt="Denoised Image">
+            </div>
+        </div>
+        <div class="row col-lg-12 m-auto justify-content-center mt-3">
+            <h2>Prospects :</h2>
+            <h5>Underwater images often have a color cast, which can be corrected using denoising and enhancement techniques.</h5>
+            <h5>Denoising techniques can enhance visibility by reducing noise and enhancing contrast, making details more discernible.</h5>
+            <h5>Despite denoising efforts, residual noise and artifacts may still be present. </h5>
+            <h5>Enlargement may not always recover fine details perfectly and can introduce artifacts or loss of sharpness.</h5>
+            <h5>The effectiveness of denoising and enlargement techniques depends on the image characteristics, and input quality.</h5>
+        </div>
+        <div class="row col-lg-3 m-auto justify-content-center mt-4">
+            <a class="btn btn-dark" href="dashboard">Go to Dashboard</a>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard {% endblock title %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<!-- ======= Breadcrumbs ======= -->
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+    <div class="container position-relative">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+                <div class="row col-lg-8 m-auto">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center mb-1">
+                            <h1>Adaptable Research Image De-Noising</h1>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-center mb-1">
+                            <h3><b>Upload Image</b></h3>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-center m-auto">
+                            {{form.image}}
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-outline-light" type="submit">submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div><!-- End testimonial item -->
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->
+
+{% endif %}
+{% endblock body %}
